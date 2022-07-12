@@ -1,0 +1,54 @@
+<div class="container">
+  <div>
+    <div class="form-group">
+      <label>Name: </label>
+      <input [(ngModel)]="product.name" />
+      <br />
+      <br />
+      <label>ID: </label>
+      <input  [(ngModel)]="product.id" />
+      <br />
+      <br />
+      <label>price: </label>
+      <input  [(ngModel)]="product.price" />
+      <br />
+      <br />
+      <label>category: </label>
+      <input  [(ngModel)]="product.category" />
+      <br />
+      <br />
+      <label>description:</label>
+      <input  [(ngModel)]="product.description" />
+
+    </div>
+    <br />
+    <button class="btn btn-secondary" (click)="addProduct()"> Add </button>
+    <button class="btn btn-secondary" (click)="deleteProduct()"> Delete</button>
+    <button class="btn btn-secondary" (click)="updateProduct()"> Update</button>
+  </div>
+  <br />
+  <table class="table">
+    <thead>
+      <tr class="table-active">
+        <th>ID</th>
+        <th>Name</th>
+        <th>price</th>
+        <th>category</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.description}}</td>
+        <!-- <td>{{p.name | crypt }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
